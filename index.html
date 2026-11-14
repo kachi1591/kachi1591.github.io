@@ -536,7 +536,7 @@ footer .links { display: flex; gap: 20px; color: var(--ink); }
   const OFF = { not_granted: 1, sampling_disabled: 1, not_declared: 1, capability_disabled: 1, capability_removed: 1 };
   let sample = null, busy = false; const turns = [];
   async function ask(q, out) {
-    if (!sample) return say(['i can't answer open questions here yet. the commands always work: ', { run: 'help' }]);
+    if (!sample) return say(['i cannot answer open questions here yet. the commands always work: ', { run: 'help' }]);
     if (busy) return say('one question at a time. still thinking.');
     const line = document.createElement('div'); line.className = 'ans'; line.textContent = 'thinking...'; out.append(line);
     const show = t => { line.textContent = t; document.getElementById('prompt').scrollIntoView({ block: 'nearest' }); };
